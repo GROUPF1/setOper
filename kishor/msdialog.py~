@@ -1,0 +1,23 @@
+from gi.repository import Gtk
+#import sys
+import pygtk
+#pygtk.require('2.0')
+#import gtk
+import glib
+class msialog(Gtk.Dialog):
+	def __init__(self, parent,data):
+		Gtk.Dialog.__init__(self, "Warning", parent, 0,(Gtk.STOCK_CLOSE, Gtk.ResponseType.CLOSE, Gtk.STOCK_OK,Gtk.ResponseType.OK))
+
+		self.set_default_size(200, 125)
+#	img=gtk.Image()
+#	image.set_from_file("./data/kfile/.ip.txt")
+#	img.show()
+		s=Gtk.Spinner()
+		s.show()
+		s.start()		
+		label = Gtk.Label(data)
+		box = self.get_content_area()
+		box.add(label)
+		box.add(s)
+		self.show_all()
+

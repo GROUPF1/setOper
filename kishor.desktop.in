@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Kishor
+_Comment=Kishor application
+Categories=GNOME;Utility;
+Exec=kishor
+Icon=kishor
+Terminal=false
+Type=Application
